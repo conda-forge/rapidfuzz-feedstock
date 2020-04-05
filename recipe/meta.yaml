@@ -1,19 +1,19 @@
 {% set name = "rapidfuzz" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: f2df0e505b3214d9196fb3cbf5abffcb50b9214004c3c8609ec11f19c3c19f95
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3bf6a42b94854276e34d10193c97ea78a9bb18ac34bece730c83adebb630226d
 
 build:
   number: 0
-  skip: true   # [py2k]
+  skip: true  # [py2k]
   script:
-    - "{{ PYTHON }} -m pip install . -vv"
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -33,12 +33,12 @@ test:
     - pip
 
 about:
-  home: "https://github.com/rhasspy/rapidfuzz"
+  home: https://github.com/rhasspy/rapidfuzz
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "rapid fuzzy string matching"
-  dev_url: "https://github.com/rhasspy/rapidfuzz"
+  summary: rapid fuzzy string matching
+  dev_url: https://github.com/rhasspy/rapidfuzz
 
 
 extra:
