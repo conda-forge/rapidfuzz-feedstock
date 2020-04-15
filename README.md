@@ -1,7 +1,7 @@
 About rapidfuzz
 ===============
 
-Home: https://github.com/rhasspy/rapidfuzz
+Home: https://github.com/maxbachmann/rapidfuzz
 
 Package license: MIT
 
