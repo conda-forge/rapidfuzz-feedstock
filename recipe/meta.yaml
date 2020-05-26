@@ -27,6 +27,7 @@ requirements:
 test:
   imports:
     - rapidfuzz
+    - from rapidfuzz import process
   commands:
     - pip check
   requires:
