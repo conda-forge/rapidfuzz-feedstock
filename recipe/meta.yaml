@@ -1,5 +1,5 @@
 {% set name = "rapidfuzz" %}
-{% set version = "0.11.3" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e83368f45e6ce699f31c058e3f5b9048f7cc58dc5c9f00429d0e2df0c9ff049
+  sha256: 6fccafb1fede3a2789f31fd44948b43400286fe048079b58f14d55a610d53fe9
 
 build:
   number: 0
