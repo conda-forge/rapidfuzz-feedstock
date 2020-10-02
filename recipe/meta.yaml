@@ -10,8 +10,7 @@ source:
   sha256: c3abe5135b565ef8bee4bcf8fc226dfa43893476306a32083d51ff6c1db5716b
 
 build:
-  number: 0
-  skip: true  # [py2k]
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv
 
@@ -40,7 +39,7 @@ about:
   license_file: LICENSE
   summary: rapid fuzzy string matching
   dev_url: https://github.com/maxbachmann/rapidfuzz
-
+  doc_url: https://maxbachmann.github.io/rapidfuzz/
 
 extra:
   recipe-maintainers:
