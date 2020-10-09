@@ -5,11 +5,13 @@ Home: https://github.com/maxbachmann/rapidfuzz
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rapidfuzz-feedstock/blob/master/LICENSE.txt)
 
 Summary: rapid fuzzy string matching
 
+Development: https://github.com/maxbachmann/rapidfuzz
 
+Documentation: https://maxbachmann.github.io/rapidfuzz/
 
 Current build status
 ====================
