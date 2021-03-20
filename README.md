@@ -1,7 +1,7 @@
 About rapidfuzz
 ===============
 
-Home: https://github.com/maxbachmann/rapidfuzz
+Home: https://github.com/maxbachmann/RapidFuzz
 
 Package license: MIT
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/rapidfuzz-feeds
 
 Summary: rapid fuzzy string matching
 
-Development: https://github.com/maxbachmann/rapidfuzz
+Development: https://github.com/maxbachmann/RapidFuzz
 
-Documentation: https://maxbachmann.github.io/rapidfuzz/
+Documentation: https://maxbachmann.github.io/RapidFuzz/
 
 Current build status
 ====================
