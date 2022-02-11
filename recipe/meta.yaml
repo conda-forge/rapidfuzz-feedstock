@@ -29,6 +29,7 @@ requirements:
     - scikit-build
     - wheel
     - setuptools
+    - rapidfuzz_capi
   run:
     - python
     - {{ pin_compatible('numpy') }}
