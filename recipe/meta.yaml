@@ -30,6 +30,7 @@ requirements:
     - wheel
     - setuptools
     - rapidfuzz_capi
+    - jarowinkler
   run:
     - python
     - {{ pin_compatible('numpy') }}
