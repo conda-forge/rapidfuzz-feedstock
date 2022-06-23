@@ -40,7 +40,7 @@ requirements:
 
 test:
   commands:
-    - chmod +x seg_wrapper.sh && chmod +x backtrace && ./seg_wrapper.sh python -c "import rapidfuzz" # [unix]
+    - chmod +x segwrapper.sh && chmod +x backtrace && ./segwrapper.sh python -c "import rapidfuzz" # [unix]
   requires:
     - pip
 
