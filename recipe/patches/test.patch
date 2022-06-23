@@ -1,0 +1,30 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b5de412..034ac12 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -16,7 +16,6 @@ else()
+     add_compile_options(-Wall -Wextra -pedantic)
+ endif()
+ 
+-find_package(NumPy REQUIRED)
+ find_package(PythonExtensions REQUIRED)
+ find_package(Python COMPONENTS Interpreter Development)
+ include(FetchContent)
+diff --git a/setup.py b/setup.py
+index 0f32b93..500258a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,5 +1,6 @@
+ from skbuild import setup
+ import rapidfuzz_capi
++import numpy as np
+ 
+ with open('README.md', 'rt', encoding="utf8") as f:
+     readme = f.read()
+@@ -34,5 +35,5 @@ setup(
+     },
+     python_requires=">=3.6",
+ 
+-    cmake_args=[f'-DRF_CAPI_PATH:STRING={rapidfuzz_capi.get_include()}']
++    cmake_args=[f'-DRF_CAPI_PATH:STRING={rapidfuzz_capi.get_include()}', f'-DNumPy_INCLUDE_DIR:STRING={np.get_include()}']
+ )
