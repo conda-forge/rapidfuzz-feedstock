@@ -10,18 +10,6 @@ index b5de412..034ac12 100644
  find_package(PythonExtensions REQUIRED)
  find_package(Python COMPONENTS Interpreter Development)
  include(FetchContent)
-diff --git a/pyproject.toml b/pyproject.toml
-index 1c08c4c..cd80bc3 100644
---- a/pyproject.toml
-+++ b/pyproject.toml
-@@ -4,7 +4,6 @@ requires = [
-     "scikit-build>=0.13.0",
-     "cmake; platform_machine not in 'armv7l|armv6l|arm64|aarch64'",
-     "ninja; platform_system!='Windows' and platform_machine not in 'armv7l|armv6l|arm64|aarch64'",
--    "oldest-supported-numpy",
-     "rapidfuzz_capi==1.0.5"
- ]
- build-backend = "setuptools.build_meta"
 diff --git a/setup.py b/setup.py
 index 0f32b93..500258a 100644
 --- a/setup.py
