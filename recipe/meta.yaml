@@ -38,9 +38,9 @@ requirements:
     - {{ pin_compatible('numpy') }}
 
 test:
-  imports:
-    - rapidfuzz
-  commands:
+  imports:  # [build_platform == target_platform]
+    - rapidfuzz  # [build_platform == target_platform]
+  commands:  
     - pip check
   requires:
     - pip
