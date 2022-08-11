@@ -12,9 +12,8 @@ source:
 build:
   skip: true  # [python_impl == 'pypy']
   number: 0
-  script:
-    - build_osxarm.sh  # [target_platform == "osx-arm64"]
-    - {{ PYTHON }} -m pip install . -vvv   # [target_platform != "osx-arm64"]
+  script: build_osxarm.sh  # [target_platform == "osx-arm64"]
+  script: {{ PYTHON }} -m pip install . -vvv   # [target_platform != "osx-arm64"]
 
 requirements:
   build:
