@@ -13,6 +13,9 @@ build:
   number: 0
   script:
     - {{ PYTHON }} -m pip install . -vvv
+  skip: true  # [osx and build_platform != target_platform]
+  skip: true  # [py37]
+  skip: true  # [python_impl == 'pypy']
 
 requirements:
   build:
