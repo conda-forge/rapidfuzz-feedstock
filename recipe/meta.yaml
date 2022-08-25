@@ -13,6 +13,15 @@ build:
   number: 0
   script:
     - {{ PYTHON }} -m pip install . -vvv
+  # fail to find the correct head path for Python. This will hopefully improve in scikit-build at some point
+  skip: true  # [python_impl == 'pypy' and (win or (linux and (aarch64 or ppc64le)))]
+  # crashes on import, since something goes wrong cross compiling
+  # This should be related to https://github.com/scikit-build/scikit-build/issues/589 but I could not get a workaround working
+  # at least partly because I do not have a mac for testing
+  skip: true  # [osx and arm64]
+  # for some completely unknown reason these crash on import in the CI.
+  # It is unclear to me how segmentation faults in the conda forge build can be debugged
+  skip: true  # [linux and py==37 and (aarch64 or ppc64le)]
 
 requirements:
   build:
