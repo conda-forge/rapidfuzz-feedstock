@@ -1,0 +1,28 @@
+diff --git a/setup.py b/setup.py
+index 1a2243e..61c0684 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,4 +1,5 @@
+ import os
++import platform
+ 
+ def show_message(*lines):
+     print("=" * 74)
+@@ -65,7 +66,16 @@ packaging = "1" in {
+     os.environ.get("CONDA_BUILD", "0"),
+     os.environ.get("RAPIDFUZZ_BUILD_EXTENSION", "0")
+ }
+-if packaging:
++# work around build issues on conda forge
++if platform.python_implementation() == 'PyPy' and platform.system() == 'Windows':
++    run_setup(False)
++elif platform.python_implementation() == 'PyPy' and platform.system() == 'Linux' and platform.machine() in {'aarch64', 'ppc64le'}:
++    run_setup(False)
++elif platform.system() == 'Darwin' and platform.machine() == 'arm64':
++    run_setup(False)
++elif platform.python_implementation() == 'CPython' and platform.system() == 'Linux' and platform.machine() in {'aarch64', 'ppc64le'}:
++    run_setup(False)
++elif packaging:
+     run_setup(True)
+ else:
+     try:
