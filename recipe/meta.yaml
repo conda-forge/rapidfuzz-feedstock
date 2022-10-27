@@ -10,7 +10,7 @@ source:
   sha256: f371453d0c1109e93ef569741a27171e602ef1fbea5c27a8f190f403234fd36b
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vvv
   # fail to find the correct head path for Python. This will hopefully improve in scikit-build at some point
