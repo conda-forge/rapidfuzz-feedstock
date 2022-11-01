@@ -1,5 +1,5 @@
 {% set name = "rapidfuzz" %}
-{% set version = "2.12.0" %}
+{% set version = "2.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f371453d0c1109e93ef569741a27171e602ef1fbea5c27a8f190f403234fd36b
+  sha256: 3b4b5dd5f31b6649b65ce3976e11183ec89ad2f308a3b655874fe01481aab34c
 
 build:
-  number: 2
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vvv
   # fail to find the correct head path for Python. This will hopefully improve in scikit-build at some point
