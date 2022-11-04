@@ -8,9 +8,11 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 3b4b5dd5f31b6649b65ce3976e11183ec89ad2f308a3b655874fe01481aab34c
+  patches:
+    - skb0161.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vvv
   # fail to find the correct head path for Python. This will hopefully improve in scikit-build at some point

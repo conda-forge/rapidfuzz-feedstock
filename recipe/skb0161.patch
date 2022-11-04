@@ -1,0 +1,11 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b7e7a1f..8e13e21 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,6 +5,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+ set(SKBUILD_LINK_LIBRARIES_KEYWORD PRIVATE)
+ set(Python_FIND_IMPLEMENTATIONS CPython PyPy)
+ set(THREADS_PREFER_PTHREAD_FLAG ON)
++set(Python_INCLUDE_DIR "${PYTHON_INCLUDE_DIR}")
+
+ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
