@@ -30,7 +30,7 @@ requirements:
     - setuptools
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - numpy
 
 test:
   imports:
