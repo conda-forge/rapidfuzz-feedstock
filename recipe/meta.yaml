@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d62137c2ca37aea90a11003ad7dc109c8f1739bfbe5a9a217f3cdb07d7ac00f6
+  patches:
+    - 0001-fix-cmake-cython.patch
 
 build:
   number: 1
@@ -21,6 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - cython
     - make
   host:
     - pip

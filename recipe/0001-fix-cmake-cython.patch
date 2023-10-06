@@ -1,0 +1,63 @@
+diff -ruN RapidFuzz-2.15.1/src/rapidfuzz/CMakeLists.txt RapidFuzz-2.15.1-patch/src/rapidfuzz/CMakeLists.txt
+--- RapidFuzz-2.15.1/src/rapidfuzz/CMakeLists.txt	2023-04-11 02:13:26.000000000 +0200
++++ RapidFuzz-2.15.1-patch/src/rapidfuzz/CMakeLists.txt	2023-10-06 21:18:13.517126605 +0200
+@@ -1,18 +1,13 @@
+ function(create_cython_target _name)
+-  if(EXISTS ${CMAKE_CURRENT_LIST_DIR}/${_name}.cxx)
+-    set(${_name}
+-        ${CMAKE_CURRENT_LIST_DIR}/${_name}.cxx
+-        PARENT_SCOPE)
+-  else()
+-    find_package(Cython REQUIRED)
+-    # should use target_include_directories once this is supported by
+-    # scikit-build
+-    include_directories(${RF_BASE_DIR}/rapidfuzz)
+-    add_cython_target(${_name} CXX)
+-    set(${_name}
+-        ${_name}
+-        PARENT_SCOPE)
+-  endif()
++  find_package(Cython REQUIRED)
++  # should use target_include_directories once this is supported by
++  # scikit-build
++  include_directories(${RF_BASE_DIR}/rapidfuzz
++                      ${RF_BASE_DIR}/rapidfuzz/distance)
++  add_cython_target(${_name} CXX)
++  set(${_name}
++      ${_name}
++      PARENT_SCOPE)
+ endfunction(create_cython_target)
+ 
+ function(rf_add_library name)
+diff -ruN RapidFuzz-2.15.1/src/rapidfuzz/distance/CMakeLists.txt RapidFuzz-2.15.1-patch/src/rapidfuzz/distance/CMakeLists.txt
+--- RapidFuzz-2.15.1/src/rapidfuzz/distance/CMakeLists.txt	2023-04-11 02:13:26.000000000 +0200
++++ RapidFuzz-2.15.1-patch/src/rapidfuzz/distance/CMakeLists.txt	2023-10-06 21:18:13.509126732 +0200
+@@ -1,19 +1,13 @@
+ function(create_cython_target _name)
+-  if(EXISTS ${CMAKE_CURRENT_LIST_DIR}/${_name}.cxx)
+-    set(${_name}
+-        ${CMAKE_CURRENT_LIST_DIR}/${_name}.cxx
+-        PARENT_SCOPE)
+-  else()
+-    find_package(Cython REQUIRED)
+-    # should use target_include_directories once this is supported by
+-    # scikit-build
+-    include_directories(${RF_BASE_DIR}/rapidfuzz
+-                        ${RF_BASE_DIR}/rapidfuzz/distance)
+-    add_cython_target(${_name} CXX)
+-    set(${_name}
+-        ${_name}
+-        PARENT_SCOPE)
+-  endif()
++  find_package(Cython REQUIRED)
++  # should use target_include_directories once this is supported by
++  # scikit-build
++  include_directories(${RF_BASE_DIR}/rapidfuzz
++                      ${RF_BASE_DIR}/rapidfuzz/distance)
++  add_cython_target(${_name} CXX)
++  set(${_name}
++      ${_name}
++      PARENT_SCOPE)
+ endfunction(create_cython_target)
+ 
+ function(rf_add_library name)
