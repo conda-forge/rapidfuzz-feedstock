@@ -405,4 +405,5 @@ Feedstock Maintainers
 =====================
 
 * [@maxbachmann](https://github.com/maxbachmann/)
+* [@xylar](https://github.com/xylar/)
 
