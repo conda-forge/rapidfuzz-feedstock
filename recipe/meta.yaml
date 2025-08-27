@@ -26,7 +26,7 @@ requirements:
   host:
     - pip
     - python
-    - scikit-build-core
+    - scikit-build-core >=0.11
     - wheel
     - setuptools
   run:
